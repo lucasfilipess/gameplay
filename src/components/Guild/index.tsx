@@ -25,8 +25,7 @@ export function Guild({ data, ...rest }: GuildProps) {
   const { heading } = theme.colors;
   return (
     <TouchableOpacity style={styles.container} activeOpacity={0.7} {...rest}>
-      <GuildIcon uri={data.icon || ''} />
-
+      <GuildIcon guildId={data.id} iconId={data.icon} />
       <View style={styles.content}>
         <View>
           <Text style={styles.title}>{data.name}</Text>

@@ -10,7 +10,7 @@ import { categories } from '../../utils/categories';
 import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
 
-type DataProps = {
+export type DataProps = {
   id: string;
   guild: GuildProps;
   category: string;
@@ -33,7 +33,7 @@ export function Appointment({ data, ...rest }: AppointmentProps) {
           style={styles.guildIconContainer}
           colors={[secondary50, secondary70]}
         >
-          <GuildIcon uri="https://wallpaperaccess.com/full/5578398.jpg" />
+          <GuildIcon guildId={data.guild.id} iconId={data.guild.icon} />
         </LinearGradient>
         <View style={styles.content}>
           <View style={styles.header}>

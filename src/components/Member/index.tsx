@@ -7,7 +7,7 @@ import { styles } from './styles';
 export type DataProps = {
   id: string;
   username: string;
-  avatarUrl: string;
+  avatar_url: string;
   status: string;
 };
 
@@ -21,7 +21,7 @@ export function Member({ data }: MemberProps) {
 
   return (
     <View style={styles.container}>
-      <Avatar urlImage={data.avatarUrl} />
+      <Avatar urlImage={data.avatar_url} />
       <View>
         <Text style={styles.title}>{data.username}</Text>
         <View style={styles.status}>
